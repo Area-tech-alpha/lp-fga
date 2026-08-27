@@ -132,11 +132,11 @@ export function LeadForm() {
           Renda
         </label>
         <select id="renda" name="renda" required defaultValue="" className={`${inputClass} appearance-none`}>
-          <option value="" disabled>
+          <option value="" disabled className="bg-white text-black">
             Qual é o seu faturamento MENSAL aproximada?
           </option>
           {RENDA_OPTIONS.map((option) => (
-            <option key={option} value={option}>
+            <option key={option} value={option} className="bg-white text-black">
               {option}
             </option>
           ))}
