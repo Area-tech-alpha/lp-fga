@@ -145,6 +145,19 @@ body::after {
   }
 }
 
+.diagnosis-vault-bg {
+  background-image: url("https://fgaeducacao.com/wp-content/uploads/2026/05/bg-cofre-mobile.webp");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 1024px) {
+  .diagnosis-vault-bg {
+    background-image: url("https://fgaeducacao.com/wp-content/uploads/2026/05/bg-cofre-desktop.webp");
+  }
+}
+
 /* Scroll-reveal (replaces the original GSAP ScrollTrigger fade/slide) */
 .reveal {
   opacity: 0;

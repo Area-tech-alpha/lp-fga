@@ -1,6 +1,6 @@
 export function DiagnosisIntro() {
   return (
-    <section className="flex flex-col items-center gap-4 bg-black px-6 py-16 text-center">
+    <section className="diagnosis-vault-bg flex flex-col items-center gap-4 bg-black px-6 pt-20 pb-[350px] text-center md:pt-24 md:pb-[500px] lg:pb-[600px]">
       <h2 className="font-heading text-[38px] leading-tight font-normal text-white">
         Diagnóstico personalizado FGA:
         <br />
