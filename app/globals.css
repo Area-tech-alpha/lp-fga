@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-gold: #ffad00;
+  --color-ink: #000000;
+  --color-panel: #1a1a1a;
+  --color-panel-border: #242424;
+  --color-muted: #afafaf;
+  --color-body: #494949;
+  --color-footer: #0f0f0f;
+  --font-heading: var(--font-aspekta), sans-serif;
+  --font-condensed: var(--font-archivo), sans-serif;
+  --font-label: var(--font-montserrat), sans-serif;
+  --font-accent: var(--font-editorial), serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  overflow-x: hidden;
+  background: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-family: var(--font-heading);
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-gold);
+  border-radius: 10px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(at 20% 80%, #fff 1px, transparent 0px);
+  background-size: 2px 2px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  mix-blend-mode: plus-lighter;
+}
+
+/* Emphasized inline word, mirrors the original theme's <i> styling */
+.accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+/* Pill CTA button shine sweep on hover */
+.btn-shine {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-shine::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  transform: skewX(-20deg);
+  mix-blend-mode: overlay;
+}
+
+.btn-shine:hover::before {
+  animation: btn-hover 0.7s linear;
+}
+
+@keyframes btn-hover {
+  from {
+    opacity: 0;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+/* Infinite marquee strip */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  gap: 30px;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 30px;
+  flex-shrink: 0;
+  animation: marquee var(--marquee-duration, 90s) linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Scroll-reveal (replaces the original GSAP ScrollTrigger fade/slide) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
