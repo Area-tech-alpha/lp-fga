@@ -44,7 +44,7 @@ export function FaqAccordion() {
               type="button"
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-condensed text-lg text-white"
+              className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left font-condensed text-lg text-white"
             >
               <span>{item.question}</span>
               <ArrowRightIcon

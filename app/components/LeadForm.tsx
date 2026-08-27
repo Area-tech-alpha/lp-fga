@@ -146,7 +146,7 @@ export function LeadForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-shine mt-2 rounded-[7px] border border-gold bg-gold px-5 py-6 font-condensed text-lg font-semibold text-white transition-opacity disabled:opacity-60"
+        className="btn-shine mt-2 cursor-pointer rounded-[7px] border border-gold bg-gold px-5 py-6 font-condensed text-lg font-semibold text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "Enviando..." : "QUERO APLICAR AGORA"}
       </button>

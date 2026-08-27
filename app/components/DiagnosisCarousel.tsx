@@ -94,7 +94,7 @@ export function DiagnosisCarousel() {
           type="button"
           onClick={() => scrollByCard(-1)}
           aria-label="Anterior"
-          className="flex size-11 items-center justify-center rounded-full border border-white/30 text-white transition hover:border-gold hover:text-gold"
+          className="flex size-11 cursor-pointer items-center justify-center rounded-full border border-white/30 text-white transition hover:border-gold hover:text-gold"
         >
           <ArrowRightIcon className="size-5 rotate-180" />
         </button>
@@ -102,7 +102,7 @@ export function DiagnosisCarousel() {
           type="button"
           onClick={() => scrollByCard(1)}
           aria-label="Próximo"
-          className="flex size-11 items-center justify-center rounded-full border border-white/30 text-white transition hover:border-gold hover:text-gold"
+          className="flex size-11 cursor-pointer items-center justify-center rounded-full border border-white/30 text-white transition hover:border-gold hover:text-gold"
         >
           <ArrowRightIcon className="size-5" />
         </button>
