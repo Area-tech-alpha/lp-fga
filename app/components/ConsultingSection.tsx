@@ -11,9 +11,9 @@ const POINTS = [
 
 export function ConsultingSection() {
   return (
-    <section className="flex flex-col items-center gap-10 bg-black px-6 py-20 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
+    <section className="flex flex-col items-center gap-10 bg-white px-6 py-20 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
       <div className="flex max-w-[550px] flex-col items-start gap-6">
-        <h2 className="font-heading text-[38px] leading-[1.1] font-normal text-white">
+        <h2 className="font-heading text-[38px] leading-[1.1] font-normal text-black">
           Nessas consultorias, você recebe{" "}
           <span className="accent">análise estratégica</span> personalizada e
           orientação prática para:
@@ -23,13 +23,13 @@ export function ConsultingSection() {
           {POINTS.map((point) => (
             <li key={point} className="flex items-center gap-3">
               <ArrowTopRightIcon className="size-6 shrink-0" />
-              <span className="font-label text-2xl text-white">{point}</span>
+              <span className="font-label text-2xl text-body">{point}</span>
             </li>
           ))}
         </ul>
 
-        <p className="font-heading text-lg text-muted">
-          O resultado é um só, <b className="text-white">uma operação estruturada e escalável</b>,
+        <p className="font-heading text-lg text-body">
+          O resultado é um só, <b className="text-black">uma operação estruturada e escalável</b>,
           capaz de gerar crescimento previsível, mais margem e liberdade para
           focar no que realmente importa: expandir sua agência sem depender
           da presença constante do dono.
@@ -44,7 +44,7 @@ export function ConsultingSection() {
           alt="Equipe FGA"
           width={455}
           height={467}
-          className="w-full rounded-2xl"
+          className="w-full rounded-2xl border border-[#33333352]"
         />
       </Reveal>
     </section>
