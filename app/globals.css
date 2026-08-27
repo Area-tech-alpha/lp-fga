@@ -112,6 +112,23 @@ body::after {
   gap: 30px;
 }
 
+.marquee-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
 .marquee-content {
   display: flex;
   gap: 30px;

@@ -24,11 +24,11 @@ const LOGOS = [
 
 export function LogosMarquee() {
   return (
-    <Marquee durationSeconds={45}>
+    <Marquee durationSeconds={110} fade>
       {LOGOS.map((logo) => (
         <div
           key={logo.file}
-          className="relative h-16 w-32 shrink-0 overflow-hidden rounded-2xl sm:h-20 sm:w-40"
+          className="relative h-16 w-32 shrink-0 overflow-hidden rounded-xl grayscale transition-all duration-300 hover:grayscale-0 sm:h-20 sm:w-40"
         >
           <Image
             src={`https://fgaeducacao.com/wp-content/uploads/2025/11/${logo.file}.webp`}

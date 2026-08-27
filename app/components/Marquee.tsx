@@ -5,12 +5,14 @@ export function Marquee({
   durationSeconds = 90,
   rotate,
   shadow,
+  fade,
   className = "",
 }: {
   children: ReactNode;
   durationSeconds?: number;
   rotate?: number;
   shadow?: boolean;
+  fade?: boolean;
   className?: string;
 }) {
   const style = rotate
@@ -18,7 +20,7 @@ export function Marquee({
     : undefined;
 
   return (
-    <div className={`marquee ${className}`} style={style}>
+    <div className={`marquee ${fade ? "marquee-fade" : ""} ${className}`} style={style}>
       <div
         className="marquee-content"
         style={{ ["--marquee-duration" as string]: `${durationSeconds}s` }}
