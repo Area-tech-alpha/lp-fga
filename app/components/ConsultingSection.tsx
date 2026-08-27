@@ -11,7 +11,7 @@ const POINTS = [
 
 export function ConsultingSection() {
   return (
-    <section className="flex flex-col items-center gap-10 bg-black px-6 py-20 lg:flex-row lg:items-center lg:justify-between">
+    <section className="flex flex-col items-center gap-10 bg-black px-6 py-20 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
       <div className="flex max-w-[550px] flex-col items-start gap-6">
         <h2 className="font-heading text-[38px] leading-[1.1] font-normal text-white">
           Nessas consultorias, você recebe{" "}

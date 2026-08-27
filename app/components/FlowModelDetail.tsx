@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function FlowModelDetail() {
   return (
-    <section className="flex flex-col items-center gap-10 bg-black px-6 py-20 lg:flex-row lg:items-center lg:justify-between">
+    <section className="flex flex-col items-center gap-10 bg-black px-6 py-20 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
       <Reveal className="w-full max-w-[455px] shrink-0">
         <Image
           src="https://fgaeducacao.com/wp-content/uploads/2026/03/img-equipe-2.webp"
