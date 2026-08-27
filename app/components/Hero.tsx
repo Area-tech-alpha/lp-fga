@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CtaButton } from "./CtaButton";
+import { LeadForm } from "./LeadForm";
 import { LogosMarquee } from "./LogosMarquee";
 
 export function Hero() {
@@ -31,17 +31,7 @@ export function Hero() {
         </h1>
       </div>
 
-      <div className="w-full max-w-3xl rounded-2xl bg-white/10 p-2">
-        <iframe
-          src="https://play.tynk.ai/p/80228eac-61de-453a-a34e-42c462675cb3"
-          style={{ width: "100%", aspectRatio: "16/9", border: 0, display: "block" }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="rounded-xl"
-        />
-      </div>
-
-      <CtaButton className="w-full max-w-[330px]" />
+      <LeadForm />
 
       <p className="font-condensed text-base text-[#D3D3D3]">
         Quem já participou da FGA
