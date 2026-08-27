@@ -1,6 +1,5 @@
 import { TopBanner } from "./components/TopBanner";
 import { Hero } from "./components/Hero";
-import { LeadFormSection } from "./components/LeadFormSection";
 import { ChallengesSection } from "./components/ChallengesSection";
 import { BenefitsSection } from "./components/BenefitsSection";
 import { FlowModelSection } from "./components/FlowModelSection";
@@ -21,7 +20,6 @@ export default function Home() {
     <>
       <TopBanner />
       <Hero />
-      <LeadFormSection />
       <ChallengesSection />
       <BenefitsSection />
       <FlowModelSection />
